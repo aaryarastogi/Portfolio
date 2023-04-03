@@ -1,31 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from './Components/About/About'
 import Home from './Components/Home/Home'
 import Project from './Components/Project/Project'
 import Contact from './Components/ContactUs/Contact'
 import Navbar from './Components/Navbar/Navbar'
-import AmazonClone from './Components/AmazonClone'
-import Dopefolio from './Components/Dopefolio'
-import Restaurant from './Components/Restaurant'
-import AutomaticQuote from './Components/AutomaticQuote'
-import Weather from './Components/Weather'
+import AmazonClone from './Components/PrjFolder/AmazonClone'
+import Dopefolio from './Components/PrjFolder/Dopefolio'
+import Restaurant from './Components/PrjFolder/Restaurant'
+import AutomaticQuote from './Components/PrjFolder/AutomaticQuote'
+import Weather from './Components/PrjFolder/Weather'
+import Mains from './Components/Mains'
+import Loader from './Components/Loader'
 
 const Main = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 8000);
+  }, []);
   return (
-    <div className='overflow-hidden 
-    style={{backgroundImage: `url("https://media.istockphoto.com/vectors/vector-background-vector-id1168080557?k=20&m=1168080557&s=612x612&w=0&h=VzZIJlFYlys1s40DGdxcZyT6vLWAJgz4qbjHnuHmcTs=")`}}'>
+  isLoading?
+  <Loader/>:
+    <div className='overflow-hidden bg-gradient-to-r from-[#2D3436] to-black'>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='about' element={<About/>}></Route>
-      <Route path='/project' element={<Project/>}></Route>
-      <Route path='/contact' element={<Contact/>}></Route>
-      <Route path='/project/amazonclone' element={<AmazonClone/>}></Route>
-      <Route path='/project/dopefolio' element={<Dopefolio/>}></Route>
-      <Route path='/project/restaurant' element={<Restaurant/>}></Route>
-      <Route path='/project/automaticQuote' element={<AutomaticQuote/>}></Route>
-      <Route path='/project/weather' element={<Weather/>}></Route>
+      <Route path='/*' element={<Mains/>}></Route>
+      <Route path='/amazonclone' element={<AmazonClone/>}></Route>
+      <Route path='/dopefolio' element={<Dopefolio/>}></Route>
+      <Route path='/restaurant' element={<Restaurant/>}></Route>
+      <Route path='/automaticQuote' element={<AutomaticQuote/>}></Route>
+      <Route path='/weather' element={<Weather/>}></Route>
+      <Route path='/casestudy/amazonClone' element={<AmazonClone/>}></Route>
+      <Route path='/casestudy/Dopefolio' element={<Dopefolio/>}></Route>
+      <Route path='/casestudy/restaurantWebsite' element={<Restaurant/>}></Route>
+      <Route path='/casestudy/automaticQuoteGenerator' element={<AutomaticQuote/>}></Route>
+      <Route path='/casestudy/weatherForecastingWebsite' element={<Weather/>}></Route>
     </Routes>
     </div>
   )

@@ -1,0 +1,15 @@
+# s1="Google Drive Link"
+# s2="Google Cloud Link"
+# s1=s1.split()
+# s2=s2.split()
+# for i in s1:
+#     for j in s2:
+#         if i==j:
+#             print(i)
+
+id=input("Enter your email id")
+# s1=id[-9:]
+if id.endswith("@cuchd.in"):
+    print("valid")
+else:
+    print("invalid")

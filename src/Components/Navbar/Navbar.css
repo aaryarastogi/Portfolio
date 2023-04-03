@@ -1,0 +1,17 @@
+@media (hover: hover) {
+    nav li:hover {
+        animation: button-shake 0.3s linear;
+    }
+    nav img:hover {
+        animation: button-shake 0.3s linear;
+    }
+}
+
+@keyframes button-shake {
+    from {
+        rotate: 30deg
+    }
+    to {
+        rotate: -30deg
+    }
+}

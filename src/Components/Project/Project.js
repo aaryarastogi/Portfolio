@@ -1,205 +1,52 @@
-import React from 'react'
-import dopefolio from '../images/dopefolio.jpeg'
-import restaurant from '../images/restaurant.png'
-import amazon from '../images/amazon.png'
-import quote from '../images/quote.png'
-import weather from '../images/weather.png'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { useDocumentTitle } from '../../Hooks/setDocumentTitle'
-
+import React, { useState } from 'react'
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import data from './data'
 
 const Project = () => {
+  const loadMore=()=>{
+    setnoOfElement(noOfElement+noOfElement);
+  }
+  const[noOfElement,setnoOfElement]=useState(3);
+  const slice=data.cardData.slice(0,noOfElement);
   return (
-    <div>
-      <h1 className='flex text-center items-center justify-center uppercase pt-10 text-4xl font-bold transition-all duration-100 md:hover:scale-110'>Projects</h1>
-      <hr className='w-10 absolute flex items-center justify-center my-5 h-2 bg-slate-400 rounded-lg md:ml-[49%] ml-[44%]'/>
-      <p className='flex items-center justify-center text-center md:text-2xl text-md md:mx-40 mx-2 my-10'>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
-      {/* First Project */}
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
-        <motion.img 
-      initial={{
-        x:-200,
-        opacity:0,
-    }}
-    whileInView={{ opacity: 1, x:0, y:0, scale:1}}
-    animate={{
-        x:0,
-        opacity:1,
-    }}
-    transition={{
-      type:"just",
-      duration:1,
-    }}
-        src={dopefolio} alt='dopefolio' className='w-auto md:mt-0'/>
-        <motion.div 
-        initial={{
-          x:100,
-          opacity:0
-        }}
-        animate={{
-          x:0,
-          opacity:1
-        }}
-        transition={{
-          duration:1,
-          ease:"easeInOut"
-        }}
-        className='flex flex-col justify-start'>
-        <h1 className='md:text-4xl text-3xl font-bold md:ml-24 ml-4 md:my-8 my-4'>Dopefolio</h1>
-        <p className='text-justify md:ml-24 mx-4 max-w-2xl md:text-2xl text-md inherit block'>
-          <p className='my-5'>Dopefolio is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc & used by thousands of developers globally</p>
-        </p>
-        <div className='justify-start md:ml-24 ml-4 my-3 bg-slate-500 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:border-2 cursor-pointer transition-all duration-100 ease-in'>
-        <Link to='/project/dopefolio'>Case Study</Link></div>
-      </motion.div>
+    <div id='project'>
+    <h1 className='flex text-center items-center justify-center uppercase pt-10 text-4xl font-bold transition-all duration-100 text-white md:hover:scale-110'>Projects</h1>
+      <hr className='w-10 absolute flex items-center justify-center my-5 h-1 bg-gradient-to-tr  from-[#FD4A59] to-indigo-700 rounded-lg md:ml-[49%] ml-[44%]'/>
+      <p className='flex items-center justify-center text-center md:text-xl text-base md:mx-40 mx-2 my-10 text-white'>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
+    <div className='py-4 container'>
+      <div className='w-auto h-auto row justify-content-center grid md:grid-cols-3 grid-cols-1 gap-6 mx-[10%] overflow-hidden'>
+        {slice.map((item,index)=>{
+          return(
+            <motion.div 
+            initial={{
+              opacity:0
+            }}
+            whileInView={{
+              opacity:1
+            }}
+            transition={{
+              x: { type:'spring', stiffness: 300, damping: 30 },
+              duration:5,
+              ease:'easeInOut'
+            }}
+            className=' col-md-6 col-lg-3 mx-0 mb-4'>
+            <div className='card p-0 overflow-hidden h-auto shadow hover:shadow-md hover:shadow-[#4E9AD5] rounded-md w-auto px-4 text-justify border-2 border-x-indigo-500 border-y-[#4E9AD5]'>
+              <img src={item.img} className="card-img-top w-56 my-10 items-center justify-center mx-auto rounded-md"/>
+              <div className='card-body'>
+                <h5 className='text-xl text-center my-4 font-semibold text-white'>{item.title}</h5>
+                <p className='card-text text-base text-justify p-4 text-slate-600'>{item.desc}</p>
+                <div className='w-24 h-10 bg-gradient-to-tr from-[#00dbde] to-[#fc00ff] hover:opacity-70 rounded-md justify-center items-center p-2 cursor-pointer my-4 ml-[70%] mr-[10%] font-semibold text-sm'><Link to={`/casestudy/${item.Name}`}>Case Study</Link></div>
+              </div>
+            </div>
+          </motion.div>
+          )
+        })}
+        <button className='w-24 h-10 bg-gradient-to-tr from-[#00dbde] to-[#fc00ff] hover:opacity-70 rounded-md justify-center items-center p-2'
+        onClick={()=>loadMore()}
+        >Load More</button>
       </div>
-      {/* SecondProject */}
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
-      <motion.img 
-      initial={{
-        x:-200,
-        opacity:0,
-    }}
-    animate={{
-        x:0,
-        opacity:1,
-    }}
-    transition={{
-      type:"just",
-      duration:1,
-    }}src={restaurant} alt='dopefolio' className='w-auto md:mt-0'/>
-        <motion.div
-        initial={{
-          x:100,
-          opacity:0
-        }}
-        animate={{
-          x:0,
-          opacity:1
-        }}
-        transition={{
-          duration:1,
-          ease:"easeInOut"
-        }}
-         className='flex flex-col justify-start'>
-        <h1 className='md:text-4xl text-3xl font-bold md:ml-24 ml-4 md:my-8 my-4'>Restaurant Website</h1>
-        <p className='text-justify md:ml-24 mx-4 max-w-2xl md:text-2xl text-md inherit block'>
-          <p className='my-5'>It is a full-stack project that I created which have been featured on some of the biggest tech sites like CSS-Tricks, React JS , etc.</p>
-        </p>
-        <div className='justify-start md:ml-24 ml-4 my-3 bg-slate-500 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:border-2 cursor-pointer transition-all duration-100 ease-in'>
-        <Link to='/project/restaurant'>Case Study</Link></div>
-      </motion.div>
-      </div>
-      {/* ThirdProject */}
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-4 '>
-      <motion.img 
-      initial={{
-        x:-200,
-        opacity:0,
-    }}
-    animate={{
-        x:0,
-        opacity:1,
-    }}
-    transition={{
-      type:"just",
-      duration:1,
-    }} src={quote} alt='dopefolio' className='w-auto md:mt-0'/>
-        <motion.div className='flex flex-col justify-start'
-        initial={{
-          x:100,
-          opacity:0
-        }}
-        animate={{
-          x:0,
-          opacity:1
-        }}
-        transition={{
-          duration:1,
-          ease:"easeInOut"
-        }}>
-        <h1 className='md:text-4xl text-3xl font-bold md:ml-24 ml-4 md:my-8 my-4'>Automatic Quote Generator</h1>
-        <p className='text-justify md:ml-24 mx-4 max-w-2xl md:text-2xl text-md inherit block'>
-          <p className='my-5'>It is a successful project that I created which have been featured on some of the biggest tech sites like API , Node JS etc & used by people globally</p>
-        </p>
-        <div className='justify-start md:ml-24 ml-4 my-3 bg-slate-500 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:border-2 cursor-pointer transition-all duration-100 ease-in'>
-        <Link to='/project/automaticQuote'>Case Study</Link></div>
-      </motion.div>
-      </div>
-      {/* FourthProject */}
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
-      <motion.img 
-      initial={{
-        x:-200,
-        opacity:0,
-    }}
-    animate={{
-        x:0,
-        opacity:1,
-    }}
-    transition={{
-      type:"just",
-      duration:1,
-    }}src={amazon} alt='dopefolio' className='w-auto md:mt-0'/>
-        <motion.div className='flex flex-col justify-start'
-        initial={{
-          x:100,
-          opacity:0
-        }}
-        animate={{
-          x:0,
-          opacity:1
-        }}
-        transition={{
-          duration:1,
-          ease:"easeInOut"
-        }}>
-        <h1 className='md:text-4xl text-3xl font-bold md:ml-24 ml-4 md:my-8 my-4'>Amazon Clone</h1>
-        <p className='text-justify md:ml-24 mx-4 max-w-2xl md:text-2xl text-md inherit block'>
-          <p className='my-5'>It is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS , React JS etc.</p>
-        </p>
-        <div className='justify-start md:ml-24 ml-4 my-3 bg-slate-500 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:border-2 cursor-pointer transition-all duration-100 ease-in'>
-          <Link to='/project/amazonclone'>Case Study</Link></div>
-      </motion.div>
-      </div>
-      {/* FifthProject */}
-      <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
-      <motion.img 
-      initial={{
-        x:-200,
-        opacity:0,
-    }}
-    animate={{
-        x:0,
-        opacity:1,
-    }}
-    transition={{
-      type:"just",
-      duration:1,
-    }} src={weather} alt='dopefolio' className='w-auto md:mt-0'/>
-        <motion.div 
-        initial={{
-          x:100,
-          opacity:0
-        }}
-        animate={{
-          x:0,
-          opacity:1
-        }}
-        transition={{
-          duration:1,
-          ease:"easeInOut"
-        }}
-        className='flex flex-col justify-start'>
-        <h1 className='md:text-4xl text-3xl font-bold md:ml-24 ml-4 md:my-8 my-4'>Weather Forecasting Web App</h1>
-        <p className='text-justify md:ml-24 mx-4 max-w-2xl md:text-2xl text-md inherit block'>
-          <p className='my-5'>It is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like HTML, Express JS etc & used by thousands of developers globally</p>
-        </p>
-        <div className='justify-start md:ml-24 ml-4 my-3 bg-slate-500 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:border-2 cursor-pointer transition-all duration-100 ease-in'>
-          <Link to='/project/weather'>Case Study</Link></div>
-      </motion.div>
-      </div>
+    </div>
     </div>
   )
 }

@@ -1,59 +1,52 @@
-// //circular maxsubarray sum
-// #include<bits/stdc++.h>
-// using namespace std;
-// int kadane(int arr[] , int s ){
-//     int maxSum=INT_MIN;
-//     int currSum=0;
-//     for(int i=0;i<s;i++){
-//         currSum+=arr[i];
-//         if(currSum<0){
-//             currSum=0;
-//         }
-//         maxSum=max(currSum , maxSum);
-//     }
-//     return maxSum;
-// }
-// int main(){
-//     int n;
-//     cin>>n;
-//     int arr[n];
-//     for(int i=0;i<n;i++){
-//         cin>>arr[i];
-//     }
-//     int wrapsum;
-//     int nonwrapsum;
-//     nonwrapsum=kadane(arr , n);
-//     int totalsum=0;
-//     for(int i=0;i<n;i++){
-//         totalsum+=arr[i];
-//         arr[i]=-arr[i];
-//     }
-//     wrapsum=totalsum-(-(kadane(arr,n)));
-//     cout<<max(wrapsum , nonwrapsum)<<endl;
-//     return 0;
-// }
 #include<bits/stdc++.h>
 using namespace std;
-bool summation(int arr[] , int n , int k){
-    int low=0;
-    int high=n-1;
-    while(low<high){
-        if((arr[low]+arr[high])==k){
-            cout<<low<<" "<<high<<endl;
-            return true;
-        }
-        else if((arr[low]+arr[high])>k){
-            high--;
-        }
-        else{
-            low++;
-        }
+class Node{
+    public:
+    int data;
+    Node*left;
+    Node*right;
+    Node(int val){
+        this->data=val;
+        this->left=NULL;
+        this->right=NULL;
     }
-    return false;
+};
+void preorder(Node*root){
+    if(root!=NULL){
+        cout<<root->data<<" ";
+    preorder(root->left);
+    preorder(root->right);
+    }
+}
+void postOrder(Node*root){
+    if(root==NULL){
+        return;
+    }
+    postOrder(root->left);
+    postOrder(root->right);
+    cout<<root->data<<" ";
+}
+void inorder(Node*root){
+    if(root==NULL){
+        return;
+    }
+    inorder(root->left);
+    cout<<root->data<<" ";
+    inorder(root->right);
 }
 int main(){
-    int arr[]={1,2,4,5,9,3,2,6};
-    int sum=13;
-    cout<<summation(arr , 8 , sum)<<endl;;
+    Node*root=new Node(1);
+    root->left=new Node(2);
+    root->right=new Node(3);
+    root->left->left=new Node(4);
+    root->left->right=new Node(5);
+    root->right->left=new Node(6);
+    root->right->right=new Node(7);
+    cout<<"Preorder:"<<endl;
+    preorder(root);
+    cout<<endl<<"Inorder:"<<endl;
+    inorder(root);
+    cout<<endl<<"Postorder:"<<endl;
+    postOrder(root);
     return 0;
 }
