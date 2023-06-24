@@ -1,52 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Node{
-    public:
-    int data;
-    Node*left;
-    Node*right;
-    Node(int val){
-        this->data=val;
-        this->left=NULL;
-        this->right=NULL;
-    }
-};
-void preorder(Node*root){
-    if(root!=NULL){
-        cout<<root->data<<" ";
-    preorder(root->left);
-    preorder(root->right);
-    }
-}
-void postOrder(Node*root){
-    if(root==NULL){
-        return;
-    }
-    postOrder(root->left);
-    postOrder(root->right);
-    cout<<root->data<<" ";
-}
-void inorder(Node*root){
-    if(root==NULL){
-        return;
-    }
-    inorder(root->left);
-    cout<<root->data<<" ";
-    inorder(root->right);
-}
 int main(){
-    Node*root=new Node(1);
-    root->left=new Node(2);
-    root->right=new Node(3);
-    root->left->left=new Node(4);
-    root->left->right=new Node(5);
-    root->right->left=new Node(6);
-    root->right->right=new Node(7);
-    cout<<"Preorder:"<<endl;
-    preorder(root);
-    cout<<endl<<"Inorder:"<<endl;
-    inorder(root);
-    cout<<endl<<"Postorder:"<<endl;
-    postOrder(root);
+    vector<vector<int>>res;
+    vector<int>n1={1,2,3};
+    vector<int>n2={2,4,6};
+    vector<int>a;
+    for(int i=0;i<n1.size();i++){
+        for(int j=0;j<n2.size();j++){
+            if(n1[i]!=n2[j]){
+                a.push_back(n1[i]);
+            }
+        }
+    }
+    res.push_back(a);
+    for(auto x:a){
+        cout<<x<<endl;
+    }
     return 0;
 }

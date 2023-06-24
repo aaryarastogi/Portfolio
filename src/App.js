@@ -12,6 +12,7 @@ import AutomaticQuote from './Components/PrjFolder/AutomaticQuote'
 import Weather from './Components/PrjFolder/Weather'
 import Mains from './Components/Mains'
 import Loader from './Components/Loader'
+import AnimCurs from './Components/AnimCurs'
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +25,7 @@ const Main = () => {
   isLoading?
   <Loader/>:
     <div className='overflow-hidden bg-gradient-to-r from-[#2D3436] to-black'>
+    <AnimCurs/>
     <Navbar/>
     <Routes>
       <Route path='/*' element={<Mains/>}></Route>

@@ -1,15 +1,16 @@
-# s1="Google Drive Link"
-# s2="Google Cloud Link"
-# s1=s1.split()
-# s2=s2.split()
-# for i in s1:
-#     for j in s2:
-#         if i==j:
-#             print(i)
+print("Sumedha Musib \n21BCS3587") 
+def last(n): 
+    return n[-1] 
+def sort_list_last(tuples): 
+    return sorted(tuples, key=last) 
+print(sort_list_last([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)])) 
 
-id=input("Enter your email id")
-# s1=id[-9:]
-if id.endswith("@cuchd.in"):
-    print("valid")
-else:
-    print("invalid")
+# my_list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow'] 
+# print("Aarya Rastogi \n21BCS3609") 
+# new_list = [] 
+# for index, value in enumerate(my_list):
+#     if index not in [0, 4, 5]:
+#         new_list.append(value) 
+# print(new_list) 
+
+ 
