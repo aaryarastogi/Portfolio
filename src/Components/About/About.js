@@ -12,6 +12,9 @@ import FrontBack from '../images/piechart.png'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../Navbar/Navbar'
+import { Line } from 'rc-progress'
+import './style.css'
+import ProgressBar from '@ramonak/react-progress-bar'
 
 const About = () => {
   const handleContact=()=>{
@@ -54,7 +57,7 @@ const About = () => {
         </p>
         <div className='justify-start md:ml-24 ml-4 my-3 bg-gradient-to-tr from-[#4E9AD5] to-[#482BBE] rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold hover:opacity-70  cursor-pointer transition-all duration-100 ease-in'><Link to='/' onClick={handleContact}>Contact</Link></div>
       </motion.div>
-      <motion.div
+      {/* <motion.div
       initial={{
         x:100,
         y:-10,
@@ -85,11 +88,98 @@ const About = () => {
         <img src={figma} alt='Figma' title='Figma' className='w-20 bg-black h-20 rounded-full cursor-pointer hover:scale-110'/>
         <img src={cpp} alt='C++' title='C++' className='w-20 bg-black h-20 rounded-full cursor-pointer hover:scale-110'/>
       </div>
-      </motion.div>
+      </motion.div> */}
+        <motion.div 
+        initial={{
+          x:100,
+          y:-10,
+          scale:0.5,
+          opacity:0
+      }}
+      whileInView={{ opacity: 1, x:0, y:0, scale:1}}
+      exit={{
+        x:100,
+          y:-10,
+          scale:0.5,
+          opacity:0
+      }}
+      transition={{
+        ease:"easeInOut",
+        duration:2,
+      }}
+        className='flex flex-col justify-start gap-2 md:px-10 md:py-0 pb-10'>
+        <h1 className='md:text-4xl text-3xl font-bold font-serif ml-4 md:my-8 my-4 text-white'>My Skills</h1>
+        {/* firstskill */}
+        
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>REACT JS</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>90%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[90%] absolute top-0 h-4 rounded shim-blue'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>HTML</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>80%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[80%] absolute top-0 h-4 rounded shim-green'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>CSS</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>80%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[80%] absolute top-0 h-4 rounded shim-pink'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>Tailwind CSS</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>80%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[80%] absolute top-0 h-4 rounded shim-red'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>C++</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>70%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[70%] absolute top-0 h-4 rounded shim-gray'></div>
+          </div>
+          
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>Node JS</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>70%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[70%] absolute top-0 h-4 rounded shim-orange'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>EXpress js</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>70%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[70%] absolute top-0 h-4 rounded shim-mergenta'></div>
+          </div>
+
+          <div className='flex flex-row'> 
+            <h1 className='text-xl font-semibold text-slate-600 ml-4 uppercase'>Mongo db</h1>
+            <h1 className='text-xl font-semibold text-slate-600 ml-auto mr-4'>60%</h1>
+          </div>
+          <div className='relative h-4 bg-gray-200 rounded mx-4'>
+            <div className='w-[60%] absolute top-0 h-4 rounded shim-ptani'></div>
+          </div>
+
+        </motion.div>
       </div>
 
       {/* PieChartPart */}
-      <div className='grid md:grid-cols-3 md:-mt-56 -mt-52'>
+      <div className='grid md:grid-cols-3 md:-mt-56 -mt-0'>
         {/* Frontend */}
         <div className='md:-mt-80 md:ml-16 ml-4 justify-start '>
           <h1 className='text-4xl font-semibold mb-4 md:ml-0 text-slate-600'>Frontend Developer</h1>

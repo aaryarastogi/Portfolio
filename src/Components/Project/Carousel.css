@@ -1,0 +1,20 @@
+.react-multi-carousel-dot-list {
+    /* Apply your custom positioning */
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.react-multi-carousel-dot-list:hover {
+    /* Apply your custom positioning */
+    border: 2px;
+}
+
+.stroke {
+    color: white;
+    letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}

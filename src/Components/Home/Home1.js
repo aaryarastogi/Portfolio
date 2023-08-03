@@ -9,7 +9,7 @@ import Lottie from 'react-lottie'
 import { motion } from 'framer-motion'
 import animationData from '../lotties/coder';
 import { type } from '@testing-library/user-event/dist/type'
-import girl from '../images/girlcoder.webp'
+import girl from '../images/Group 10.png'
 
 const Home1 = () => {
   const defaultOptions = {
@@ -84,8 +84,8 @@ const Home1 = () => {
         type:'spring'
       }}className='flex flex-col justify-start'>
         {/* Image part */}
-        <video src={coder} autoPlay loop muted className='md:w-96 w-64 items-center justify-center my-[30%] md:ml-32 ml-16 md:mr-0 mr-4 bg-transparent'></video>
-        
+        {/* <video src={coder} autoPlay loop muted className='md:w-96 w-64 items-center justify-center my-[30%] md:ml-32 ml-16 md:mr-0 mr-4 bg-transparent'></video> */}
+        <img src={girl} alt='coder' className='md:w-96 w-60 items-center justify-center my-[30%] md:ml-32 ml-16 md:mr-0 mr-4 bg-transparent'></img>
         {/* <img src={girl} alt='coder' autoPlay loop muted className='md:w-80 w-44 items-center justify-center my-[20%] md:ml-44 ml-20 md:mr-0 mr-4 bg-transparent'></img> */}
         </motion.div>
     </div>
