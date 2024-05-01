@@ -56,7 +56,7 @@ function Navbar() {
      className={`flex h-auto justify-between fixed w-full top-0 md:flex md:items-center z-20 backdrop-blur-sm bg-transparent`}>
       <div className="flex items-center m-2">
         <Link to="/">
-          <img className="cursor-pointer lg:mx-10 w-24 lg:w-28 backdrop-blur-sm" src={logo} alt="" onClick={handleHome}/>
+          <img className="cursor-pointer lg:mx-10 w-16 lg:w-24 backdrop-blur-sm" src={logo} alt="" onClick={handleHome}/>
         </Link>
       </div>
       {open? <MdClose fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>:<FiMenu fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>}

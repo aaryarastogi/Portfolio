@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='items-center justify-center md:mx-10 mt-0 h-[0.32px] bg-[#959595]'></div>
-        <h1 className='text-center md:mt-20 my-6 md:my-0 md:text-md text-sm text-white'>© Copyright 2023. Made by Aarya Rastogi</h1>
+        <h1 className='text-center md:mt-20 my-6 md:my-0 md:text-md text-sm text-white'>© Copyright 2024. Made by Aarya Rastogi</h1>
     </div>
   )
 }

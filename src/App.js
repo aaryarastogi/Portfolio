@@ -6,13 +6,16 @@ import Project from './Components/Project/Project'
 import Contact from './Components/ContactUs/Contact'
 import Navbar from './Components/Navbar/Navbar'
 import AmazonClone from './Components/PrjFolder/AmazonClone'
-import Dopefolio from './Components/PrjFolder/Dopefolio'
+import Dopefolio from './Components/PrjFolder/Ecommerce'
 import Restaurant from './Components/PrjFolder/Restaurant'
 import AutomaticQuote from './Components/PrjFolder/AutomaticQuote'
 import Weather from './Components/PrjFolder/Weather'
 import Mains from './Components/Mains'
 import Loader from './Components/Loader'
 import AnimCurs from './Components/AnimCurs'
+import Ecommerce from './Components/PrjFolder/Ecommerce'
+import ComingSoon from './Components/ComingSoon'
+import Tourism from './Components/PrjFolder/Tourism'
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,11 +37,16 @@ const Main = () => {
       <Route path='/restaurant' element={<Restaurant/>}></Route>
       <Route path='/automaticQuote' element={<AutomaticQuote/>}></Route>
       <Route path='/weather' element={<Weather/>}></Route>
+
+      <Route path='/comingSoon' element={<ComingSoon/>}></Route>
+
       <Route path='/casestudy/amazonClone' element={<AmazonClone/>}></Route>
-      <Route path='/casestudy/Dopefolio' element={<Dopefolio/>}></Route>
+      <Route path='/casestudy/Dopefolio' element={<Dopefolio />}></Route>
       <Route path='/casestudy/restaurantWebsite' element={<Restaurant/>}></Route>
       <Route path='/casestudy/automaticQuoteGenerator' element={<AutomaticQuote/>}></Route>
       <Route path='/casestudy/weatherForecastingWebsite' element={<Weather/>}></Route>
+      <Route path='/casestudy/Ecommercewebsite' element={<Ecommerce/>}></Route>
+      <Route path='/casestudy/tourismwebsite' element={<Tourism/>}></Route>
     </Routes>
     </div>
   )

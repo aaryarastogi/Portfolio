@@ -10,6 +10,7 @@ import { motion } from 'framer-motion'
 import animationData from '../lotties/coder';
 import { type } from '@testing-library/user-event/dist/type'
 import girl from '../images/Group 10.png'
+import resume from '../images/resume.pdf'
 
 const Home1 = () => {
   const defaultOptions = {
@@ -31,12 +32,18 @@ const Home1 = () => {
         setTimeout(()=>ripples.remove(),1000)
       })
     })
+
   const handleContact=()=>{
     const element=document.getElementById("contact");
     if(element){
       element.scrollIntoView({behavior:"smooth"})
     }
   }
+
+  const handleResume=()=>{
+    window.open(resume,'_blank')
+  }
+
   return (
     <div className='w-full h-screen grid md:grid-cols-2 grid-rows-2' id='home'>
       <div className='hidden lg:block absolute my-[30%] text-4xl h-56 translate-y-[-50%] bg-transparent backdrop-blur-sm p-0.5'>
@@ -67,8 +74,11 @@ const Home1 = () => {
           cursorChar=''
           loop/></span></h1>
           <h3 className='md:text-xl text-md items-center justify-center text-white text-justify my-4'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h3>
-        <button className='justify-start p-2 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in' onClick={handleContact}>Hire Me</button>
-      </motion.div>
+          <div className='flex flex-row gap-6'>
+            <button className='justify-start p-2 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in' onClick={handleContact}>Hire Me</button>
+            <button className='justify-start p-2 rounded-md w-32 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in' onClick={handleResume}>My Resume</button>
+          </div>
+        </motion.div>
 
       <motion.div 
       initial={{

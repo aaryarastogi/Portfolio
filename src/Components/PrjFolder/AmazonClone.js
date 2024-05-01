@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 const AmazonClone= () => {
   useEffect(() => {
     document.title = "Case Study of Amazon Clone";  
+    window.scrollTo(0, 0);
   }, []);
   return (
   <div className='overflow-hidden bg-[#0F1630]'>
@@ -18,7 +19,8 @@ const AmazonClone= () => {
     </div>
     </div>
     <img src={amazon} className='w-[50rem] items-center justify-center mx-auto'></img>
-    <div className='flex flex-col mt-10 gap-10 text-justify pl-24 pr-16 max-w-7xl w-[92%] m-auto'>
+
+    <div className='flex flex-col mt-10 gap-10 text-justify max-w-7xl w-[92%] m-auto'>
       <h1 className='text-3xl font-bold text-gray-500 cpitalize'>Project Overview</h1>
       <div>
       <p className='text-xl mb-4 text-slate-500'>It is an Open-Source project which is a simple and clean multi-page portfolio website template for developers. I created this project for some experience to gain on how react projects work.</p>

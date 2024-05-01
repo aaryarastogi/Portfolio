@@ -4,9 +4,12 @@ import Footer from '../Footer.js'
 import { Link } from 'react-router-dom'
 
 const Restaurant= () => {
+  
   useEffect(() => {
     document.title = "Case Study of Restaurant Website";  
+    window.scrollTo(0, 0);
   }, []);
+
   return (
   <div className='overflow-hidden bg-[#0F1630]'>
     <div className="w-full h-screen/2 overflow-hidden"> 
@@ -18,7 +21,7 @@ const Restaurant= () => {
     </div>
     </div>
     <img src={restaurant} className='w-[50rem] items-center justify-center mx-auto'></img>
-    <div className='flex flex-col mt-10 gap-10 text-justify pl-24 pr-16 max-w-7xl w-[92%] m-auto'>
+    <div className='flex flex-col mt-10 gap-10 text-justify max-w-7xl w-[92%] m-auto'>
       <h1 className='text-3xl font-bold text-gray-500 cpitalize'>Project Overview</h1>
       <div>
       <p className='text-xl mb-4 text-slate-500'>It is an Open-Source project which is a simple and clean multi-page restaurant website template for developers. I created this project for developers to quickly build a good-looking and fast-performing multi-page restaurant website without having to code their restaurant website from scratch.</p>
@@ -28,25 +31,27 @@ const Restaurant= () => {
       <p className='text-xl mb-4 text-slate-500'>Feel free to check out the Project by visiting the Project Link.</p>
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>Tools Used</h1>
-      <div className='flex flex-row gap-4 mb-4'>
-      <div className='bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>React JS</h1>
-      </div>
-      <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>Tailwind CSS</h1>
-      </div>
-      <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>JavaScript</h1>
-      </div>
-      <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>Firebase</h1>
-      </div>
-      <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>Netlify</h1>
-      </div>
-      <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
-        <h1>Github</h1>
-      </div>
+      <div className='overflow-x-auto scrollbar-hidden'>
+        <div className='flex flex-row gap-4 mb-4'>
+          <div className='bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>React JS</h1>
+          </div>
+          <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>Tailwind CSS</h1>
+          </div>
+          <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>JavaScript</h1>
+          </div>
+          <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>Firebase</h1>
+          </div>
+          <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>Netlify</h1>
+          </div>
+          <div className=' bg-gradient-to-tr from-pink-700 to-blue-800 w-auto text-center py-2 px-2 h-auto rounded-md italic'>
+            <h1>Github</h1>
+          </div>
+        </div>
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>See Live</h1>
       <div className='flex flex-row gap-4 mb-4'>
