@@ -61,7 +61,7 @@ const Tourism = () => {
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>See Live</h1>
       <div className='flex flex-row gap-4 mb-4'>
-      <Link to='/comingSoon'><p className='bg-gradient-to-tr from-pink-700 to-blue-800 hover:opacity-75 capitalize leading-3 text-center font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer'><a target={'_blank'}>Project Link</a></p></Link>
+      <p className='bg-gradient-to-tr from-pink-700 to-blue-800 hover:opacity-75 capitalize leading-3 text-center font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer'><a target={'_blank'}>Project Link</a></p>
       <Link to='/' className='hover:-translate-y-1 border-2 border-gray-800 transition-all duration-100 ease-in uppercase leading-3 text-center text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 to-blue-700 italic font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer'>Go Back</Link>
       </div>
     </div>
