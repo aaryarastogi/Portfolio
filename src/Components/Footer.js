@@ -7,7 +7,9 @@ const Footer = () => {
         <div className='grid md:grid-cols-2 grid-rows-1 md:gap-4 text-white w-full md:h-56 h-auto'>
             <div className='md:p-20 md:pl-32 p-10 md:pb-10 pb-2'>
                 <h1 className='mb-2 md:text-2xl text-xl font-bold uppercase'>Aarya Rastogi</h1>
-                <p className='md:w-[30rem] md:text-xl text-base'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
+                <p className='md:w-[30rem] md:text-xl text-base'>
+                   MERN Stack Developer focused on delivering complete web solutions that solve real-world problems.
+                </p>
             </div>
             <div className='md:p-20 md:pl-48'>
                 <h1 className='mb-2 md:text-2xl text-xl font-bold uppercase pl-10'>Social</h1>

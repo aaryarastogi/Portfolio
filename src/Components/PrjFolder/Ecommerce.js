@@ -29,7 +29,7 @@ const Ecommerce = () => {
       <p className='text-xl mb-4 text-slate-500'>Implements secure user authentication for seamless login and registration functionalities, enhancing user experience and data security.</p>
       <p className='text-xl mb-4 text-slate-500'>Utilizes MongoDB, Express.js, React.js, and Node.js to power the e-commerce platform, ensuring a robust and scalable architecture.</p>
       <p className='text-xl mb-4 text-slate-500'>Enables users to add items to their cart, view cart contents, and modify quantities before proceeding to checkout, streamlining the shopping experience.</p>
-      <p className='text-xl mb-4 text-slate-500 '>Integrates a secure payment gateway, such as Stripe or PayPal, to facilitate smooth and secure online transactions, instilling trust and confidence in customers.</p>
+      <p className='text-xl mb-4 text-slate-500 '>Integrates a secure payment gateway, such as Razorpay, to facilitate smooth and secure online transactions, instilling trust and confidence in customers.</p>
       <p className='text-xl mb-4 text-slate-500'>Feel free to check out the Project by visiting the Project Link.</p>
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize overflow-x-auto'>Tools Used</h1>

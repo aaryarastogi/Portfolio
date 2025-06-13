@@ -23,9 +23,9 @@ const AmazonClone= () => {
     <div className='flex flex-col mt-10 gap-10 text-justify max-w-7xl w-[92%] m-auto'>
       <h1 className='text-3xl font-bold text-gray-500 cpitalize'>Project Overview</h1>
       <div>
-      <p className='text-xl mb-4 text-slate-500'>It is an Open-Source project which is a simple and clean multi-page portfolio website template for developers. I created this project for some experience to gain on how react projects work.</p>
-      <p className='text-xl mb-4 text-slate-500'>It  is designed to replicate the functionality and features of Amazon.com, the world's largest online retailer. The goal of an Amazon clone is to provide users with a similar shopping experience to Amazon, but with a unique brand, different product offerings, and custom features.</p>
-      <p className='text-xl mb-4 text-slate-500'>Dopefolio is now being used by thousands of developers globally and it has helped many people in landing jobs & opportunities which makes me happy that my creation is helping other people in building their careers.</p>
+      <p className='text-xl mb-4 text-slate-500'>Design of Amazon’s homepage using HTML, CSS, and JavaScript, including product cards, banners, and navigation for a familiar and engaging user experience.</p>
+      <p className='text-xl mb-4 text-slate-500'>Implemented add-to-cart and remove-from-cart functionality using JavaScript (or React), managing all state client-side without a backend.</p>
+      <p className='text-xl mb-4 text-slate-500'>Designed a product grid with dynamic rendering that updates the UI in real-time when interacting with items, providing a seamless e-commerce simulation.</p>
       <p className='text-xl mb-4 text-slate-500'>Feel free to check out the Project by visiting the Project Link.</p>
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>Tools Used</h1>

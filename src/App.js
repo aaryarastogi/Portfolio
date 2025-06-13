@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import About from './Components/About/About'
-import Home from './Components/Home/Home'
-import Project from './Components/Project/Project'
-import Contact from './Components/ContactUs/Contact'
 import Navbar from './Components/Navbar/Navbar'
 import AmazonClone from './Components/PrjFolder/AmazonClone'
 import Dopefolio from './Components/PrjFolder/Ecommerce'
@@ -16,6 +12,7 @@ import AnimCurs from './Components/AnimCurs'
 import Ecommerce from './Components/PrjFolder/Ecommerce'
 import ComingSoon from './Components/ComingSoon'
 import Tourism from './Components/PrjFolder/Tourism'
+import { AnimatePresence } from 'framer-motion';
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);

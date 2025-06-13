@@ -1,0 +1,19 @@
+.wrapper {
+  border: 3px solid blue;
+}
+
+.container {
+  background-color: pink;
+  border-radius: 100%;
+}
+
+.barCompleted {
+  background-color: lightblue;
+  width: 80%;
+  border-radius: 100%;
+}
+
+.label {
+  font-size: 20px;
+  color: green;
+}

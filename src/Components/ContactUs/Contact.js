@@ -1,17 +1,12 @@
-import React from 'react'
 import Footer from '../Footer'
 import { motion } from 'framer-motion'
-import Navbar from '../Navbar/Navbar'
-import background from '../images/bg.jpg'
 
 const Contact = () => {
   return (
     <div className='w-full ' id="contact">
-      {/* <Navbar/> */}
       <h1 className='flex text-center items-center justify-center capitalize pt-10 md:text-4xl text-2xl font-bold transition-all duration-100 md:hover:scale-110 text-white'>Feel Free to contact me</h1>
       <hr className='w-10 absolute flex items-center justify-center my-5 h-1 bg-gradient-to-tr  from-[#FD4A59] to-indigo-700 rounded-lg md:ml-[49%] ml-[44%]'/>
       <p className='flex items-center justify-center text-center md:text-xl text-md md:mx-40 mx-2 my-10 text-white'>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-      {/* Form */}
       <motion.div
 initial={{
   opacity:0,

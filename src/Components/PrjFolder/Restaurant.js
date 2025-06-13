@@ -24,11 +24,12 @@ const Restaurant= () => {
     <div className='flex flex-col mt-10 gap-10 text-justify max-w-7xl w-[92%] m-auto'>
       <h1 className='text-3xl font-bold text-gray-500 cpitalize'>Project Overview</h1>
       <div>
-      <p className='text-xl mb-4 text-slate-500'>It is an Open-Source project which is a simple and clean multi-page restaurant website template for developers. I created this project for developers to quickly build a good-looking and fast-performing multi-page restaurant website without having to code their restaurant website from scratch.</p>
-      <p className='text-xl mb-4 text-slate-500'>A restaurant web application is a platform that allows users to interact with a restaurant, place orders for food and drinks, and manage their dining experience from a web browser or mobile device.</p>
-      <p className='text-xl mb-4 text-slate-500'>The goal of a restaurant web application is to provide a convenient and user-friendly platform for customers to engage with a restaurant and order food for delivery or pickup.The use of a restaurant web application can significantly enhance the customer experience and improve the efficiency of the restaurant's operations, making it a valuable tool for restaurants of all sizes.</p>
-      <p className='text-xl mb-4 text-slate-500'>It has many other features like you can add items to cart and you can go to different different pages by just clicking on button . Actually It can help you a lot to learn in React JS</p>
-      <p className='text-xl mb-4 text-slate-500'>Feel free to check out the Project by visiting the Project Link.</p>
+        <p className='text-xl mb-4 text-slate-500'>It is a clean multi-page restaurant website template for developers.</p>
+        <p className='text-xl mb-4 text-slate-500'>I created this project for developers to quickly build a good-looking and fast-performing multi-page restaurant website without having to code their restaurant website from scratch.</p>
+        <p className='text-xl mb-4 text-slate-500'>A restaurant web application is a platform that allows users to interact with a restaurant, place orders for food and drinks, and manage their dining experience from a web browser or mobile device.</p>
+        <p className='text-xl mb-4 text-slate-500'>The goal of a restaurant web application is to provide a convenient and user-friendly platform for customers to engage with a restaurant and order food for delivery or pickup.</p>
+        <p className='text-xl mb-4 text-slate-500'>It has many other features like you can add items to cart and you can visit different pages by just clicking on button.</p>
+        <p className='text-xl mb-4 text-slate-500'>Feel free to check out the Project by visiting the Project Link.</p>
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>Tools Used</h1>
       <div className='overflow-x-auto scrollbar-hidden'>

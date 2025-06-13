@@ -1,14 +1,13 @@
 import React from "react";
+import tourism from './Videos/tourism.mp4'
 
 const ComingSoon=()=>{
     return(
-        <div className='overflow-hidden bg-[#0F1630]'>
-            <div className="flex items-center justify-center w-full h-screen overflow-hidden bg-[#0F1630]"> 
-                    <h1 className='md:text-6xl text-2xl font-bold text-center bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent italic uppercase mb-4'>Coming Soon...</h1>
-                {/* <video src={tourism}></video> */}
-            </div>
+        <div className='flex flex-col items-center justify-center space-y-10 w-full h-screen bg-[#0F1630]'>
+            <p className="md:text-2xl text-md text-center md:mt-[4%] italic text-pink-400 font-bold">Coming Soon – Here's a Sneak Peek! 👀</p>
+            <video src={tourism} className="md:w-7/12 px-12 flex items-center justify-center" autoPlay={true}></video>
         </div>
     )
 }
 
-export default ComingSoon;
+export default ComingSoon; 
