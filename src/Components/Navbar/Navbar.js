@@ -59,8 +59,8 @@ function Navbar() {
           <img className="cursor-pointer lg:mx-10 w-16 lg:w-24 backdrop-blur-sm" src={logo} alt="" onClick={handleHome}/>
         </Link>
       </div>
-      {open? <MdClose fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>:<FiMenu fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>}
-      <ul className={`md:flex md:items-center bg-transparent backdrop-blur-sm text-black lg:mx-8 gap-6 md:z-auto md:static absolute w-full left-0 md:justify-end md:mr-10 md:py-0 py-4 md:pl-0 pl-6 md:opacity-100 ${open ?'opacity-100':'opacity-0'} transition-all ${open?'top-14' :'top-[-400px]' } ease-in duration-500 font-semibold`}>
+      {/* {open? <MdClose fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>:<FiMenu fontSize={"32px"} className="cursor-pointer m-4 md:hidden block transition-all ease-in duration-500" onClick={() => setOpen(!open)}/>} */}
+      <ul className={`md:flex hidden md:items-center bg-transparent backdrop-blur-sm text-black lg:mx-8 gap-6 md:z-auto md:static absolute w-full left-0 md:justify-end md:mr-10 md:py-0 py-4 md:pl-0 pl-6 md:opacity-100 ${open ?'opacity-100':'opacity-0'} transition-all ${open?'top-14' :'top-[-400px]' } ease-in duration-500 font-semibold`}>
         <li><Link to='/' className='md:text-xl font-semibold backdrop-blur-sm text-white text-sm hover:text-blue-600 transition-all duration-100 ease-in-out' onClick={handleHome}>Home</Link></li>
         <li><Link to='/' className='md:text-xl font-semibold backdrop-blur-sm text-white text-sm hover:text-blue-600 transition-all duration-100 ease-in-out' onClick={handleAbout}>About</Link></li>
         <li><Link to='/' className='md:text-xl font-semibold backdrop-blur-sm text-sm text-white hover:text-blue-600  transition-all duration-100 ease-in-out' onClick={handleProject}>Projects</Link></li>
