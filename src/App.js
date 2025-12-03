@@ -24,7 +24,7 @@ const Main = () => {
   return (
   isLoading?
   <Loader/>:
-    <div className='overflow-hidden bg-gradient-to-r from-[#2D3436] to-black'>
+    <div className='overflow-hidden bg-[#0a0e27] min-h-screen'>
     <AnimCurs/>
     <Navbar/>
     <Routes>

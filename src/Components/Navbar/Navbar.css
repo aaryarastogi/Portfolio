@@ -1,17 +1,21 @@
+/* Modern navbar animations */
 @media (hover: hover) {
     nav li:hover {
-        animation: button-shake 0.3s linear;
+        transform: translateY(-2px);
     }
     nav img:hover {
-        animation: button-shake 0.3s linear;
+        transform: scale(1.1) rotate(5deg);
     }
 }
 
-@keyframes button-shake {
-    from {
-        rotate: 30deg
-    }
-    to {
-        rotate: -30deg
+/* Smooth transitions for navbar elements */
+nav a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile menu animation */
+@media (max-width: 768px) {
+    nav ul {
+        transition: all 0.3s ease-in-out;
     }
 }

@@ -39,52 +39,98 @@ const Project = () => {
   const slice=data.cardData.slice(0,noOfElement);
 
 return (
-    <div className='bg-backgroundcolor my-10 w-full' id='project'>
-      <h1 className='flex text-center items-center justify-center uppercase pt-10 text-4xl font-bold transition-all duration-100 text-white md:hover:scale-110'>Projects</h1>
-        <hr className='w-10 absolute flex items-center justify-center my-5 h-1 bg-gradient-to-tr  from-[#FD4A59] to-indigo-700 rounded-lg md:ml-[49%] ml-[44%]'/>
-        <p className='flex items-center justify-center text-center md:text-xl text-base md:mx-40 mx-2 my-10 text-white'>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
-      <Carousel responsive={responsive}
-        ref={carouselRef}
-        arrows={true}
-        swipeable={true}
-        draggable={false}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={4000}
-        keyBoardControl={true}
-        slidesToSlide={1}
-        containerClass="carousel-container"
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        className='pt-20'
-      >
-      {slice.map((item,index)=>{
-          return(
-            <motion.div 
-            initial={{
-              opacity:0
-            }}
-            whileInView={{
-              opacity:1
-            }}
-            transition={{
-              x: { type:'spring', stiffness: 300, damping: 30 },
-              duration:5,
-              ease:'easeInOut'
-            }}
-            className=' col-md-6 col-lg-3 mx-0 mb-4'>
-            <div className='card lg:mx-80 md:mx-32 mx-2 p-0 overflow-hidden h-auto shadow hover:shadow-md hover:shadow-[#4E9AD5] rounded-md w-auto px-4 text-justify border-2 border-x-indigo-500 border-y-[#4E9AD5]'>
-              <img src={item.img} className="card-img-top w-64 my-10 items-center justify-center mx-auto rounded-md"/>
-              <div className='card-body'>
-                <h5 className='text-xl text-center my-4 font-semibold text-white'>{item.title}</h5>
-                <p className='card-text text-base text-justify p-4 text-slate-600'>{item.desc}</p>
-                <div className='w-24 h-10 bg-gradient-to-tr from-[#00dbde] to-[#fc00ff] hover:opacity-70 rounded-md justify-center items-center p-2 cursor-pointer my-4 ml-auto font-semibold text-sm'><Link to={`/casestudy/${item.Name}`}>Case Study</Link></div>
-              </div>
-            </div>
-          </motion.div>
-          )
-        })}
-      </Carousel>
+    <div className='w-full py-12 md:py-20 relative' id='project'>
+      {/* Background decoration */}
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent'></div>
+      
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 relative z-10'>
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4'>
+            My <span className='gradient-text'>Projects</span>
+          </h1>
+          <div className='flex items-center justify-center gap-2 md:gap-4 mb-4'>
+            <div className='h-1 w-8 md:w-16 bg-gradient-to-r from-transparent to-purple-500'></div>
+            <div className='w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-500'></div>
+            <div className='h-1 w-8 md:w-16 bg-gradient-to-l from-transparent to-purple-500'></div>
+          </div>
+          <p className='text-gray-400 text-sm md:text-base max-w-2xl mx-auto px-4'>
+            Here you will find some of the personal and client projects that I created with each project containing its own case study
+          </p>
+        </motion.div>
+
+        <Carousel responsive={responsive}
+          ref={carouselRef}
+          arrows={true}
+          swipeable={true}
+          draggable={false}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={4000}
+          keyBoardControl={true}
+          slidesToSlide={1}
+          containerClass="carousel-container"
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+          className='pt-10'
+        >
+        {slice.map((item,index)=>{
+            return(
+              <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease:'easeOut'
+              }}
+              className='flex justify-center mb-8'
+            >
+              <motion.div 
+                className='glass rounded-2xl overflow-hidden max-w-2xl w-full border border-white/10 backdrop-blur-xl group hover:border-purple-500/50 transition-all duration-300'
+                whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(102, 126, 234, 0.3)" }}
+              >
+                <div className='relative overflow-hidden'>
+                  <img 
+                    src={item.img} 
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    alt={item.title}
+                  />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                </div>
+                <div className='p-4 sm:p-6 md:p-8'>
+                  <h5 className='text-lg sm:text-xl md:text-2xl text-center mb-3 md:mb-4 font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-300'>{item.title}</h5>
+                  <p className='text-xs sm:text-sm md:text-base text-justify text-gray-300 leading-relaxed mb-4 md:mb-6'>{item.desc}</p>
+                  <motion.div 
+                    className='flex justify-end'
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Link 
+                      to={`/casestudy/${item.Name}`}
+                      className='px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-sm md:text-base text-white shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300 flex items-center gap-2'
+                    >
+                      <span>Case Study</span>
+                      <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
+            )
+          })}
+        </Carousel>
+      </div>
     </div>
 )
 }

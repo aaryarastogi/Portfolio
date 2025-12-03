@@ -6,7 +6,7 @@ import Project from './Project/Project'
 
 const Mains = () => {
   return (
-    <div className='bg-[#0F1630]'>
+    <div className='bg-[#0a0e27]'>
         <Home/>
         <About/>
         <Project/>

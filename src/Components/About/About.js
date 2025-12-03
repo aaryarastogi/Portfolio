@@ -39,22 +39,44 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen px-6" id="about">
-      <h1 className='flex text-center items-center justify-center uppercase pt-10 text-4xl font-bold text-white transition-all duration-100 md:hover:scale-110 md:mb-0 mb-4'>About Me</h1>
-      <hr className='w-10 absolute flex items-center justify-center my-5 h-2 bg-slate-400 rounded-lg md:ml-[49%] ml-[44%]'/>
+    <div className="min-h-screen px-4 sm:px-6 py-12 md:py-20 relative" id="about">
+      {/* Background decoration */}
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent'></div>
       
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4'>
+            About <span className='gradient-text'>Me</span>
+          </h1>
+          <div className='flex items-center justify-center gap-2 md:gap-4 mb-4'>
+            <div className='h-1 w-8 md:w-16 bg-gradient-to-r from-transparent to-purple-500'></div>
+            <div className='w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-500'></div>
+            <div className='h-1 w-8 md:w-16 bg-gradient-to-l from-transparent to-purple-500'></div>
+          </div>
+          <p className='text-gray-400 text-sm md:text-base max-w-2xl mx-auto px-4'>
+            Get to know more about my skills and expertise
+          </p>
+        </motion.div>
+        
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
-          className="grid lg:grid-cols-2 gap-16 items-center"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center"
         >
           <LeftSection/>
 
           <motion.div 
             variants={containerVariants}
-            className="grid grid-cols-2 md:grid-cols-3 gap-8"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           >
             {skills.map((skill, index) => (
               <motion.div
