@@ -42,7 +42,7 @@ const Main = () => {
       <Route path='/casestudy/restaurantWebsite' element={<Restaurant/>}></Route>
       <Route path='/casestudy/automaticQuoteGenerator' element={<AutomaticQuote/>}></Route>
       <Route path='/casestudy/weatherForecastingWebsite' element={<Weather/>}></Route>
-      <Route path='/casestudy/Ecommercewebsite' element={<Ecommerce/>}></Route>
+      <Route path='/casestudy/Cartify' element={<Ecommerce/>}></Route>
       <Route path='/casestudy/tourismwebsite' element={<Tourism/>}></Route>
     </Routes>
     </div>

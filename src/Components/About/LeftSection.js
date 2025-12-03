@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import developerImg from '../images/developer.png'
 import resume from '../images/resume.pdf'
+import { Link } from "react-router-dom";
 
 export default function LeftSection() {
   const handleResume=()=>{
@@ -40,9 +41,8 @@ export default function LeftSection() {
           className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={handleResume}
         >
-          Download CV
+        <Link to='https://drive.google.com/file/d/19urtKdG_CNkx74iaj-W2i1coc-jvDx0J/view?usp=sharing' target='_blank'>Download CV</Link>
         </motion.button>
       </div>
 

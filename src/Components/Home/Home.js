@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import animationData from '../lotties/coder';
 import girl from '../images/Group 10.png'
 import resume from '../images/resume.pdf'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const defaultOptions = {
@@ -72,7 +73,8 @@ const Home = () => {
           </h3>
           <div className='flex flex-row gap-6'>
             <button className='justify-start p-2 rounded-md w-28 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in' onClick={handleContact}>Hire Me</button>
-            <button className='justify-start p-2 rounded-md w-32 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in' onClick={handleResume}>My Resume</button>
+            <button className='justify-start p-2 rounded-md w-32 text-center uppercase h-10 pt-2 font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 hover:opacity-60 tracking-wider cursor-pointer transition-all duration-100 ease-in'>
+              <Link to='https://drive.google.com/file/d/19urtKdG_CNkx74iaj-W2i1coc-jvDx0J/view?usp=sharing' target='_blank'>My Resume</Link></button>
           </div>
         </motion.div>
 

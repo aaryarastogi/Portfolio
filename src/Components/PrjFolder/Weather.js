@@ -55,7 +55,8 @@ const AutomaticQuote= () => {
       </div>
       <h1 className='text-3xl font-bold text-gray-500 capitalize'>See Live</h1>
       <div className='flex flex-row gap-4 mb-4'>
-      <p className='bg-gradient-to-tr from-pink-700 to-blue-800 hover:opacity-75 capitalize leading-3 text-center font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer'><a href='https://weather-forecasting-web-app-1.onrender.com/' target={'_blank'}>Project Link</a></p>
+      <p className='bg-gradient-to-tr from-pink-700 to-blue-800 hover:opacity-75 capitalize leading-3 text-center font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer'>
+        <a href='https://github.com/aaryarastogi/weather-app' target={'_blank'}>Github Link</a></p>
       <Link to='/project' className="hover:-translate-y-1 border-2 border-gray-800 transition-all duration-100 ease-in uppercase leading-3 text-center text-transparent bg-clip-text bg-gradient-to-tr from-pink-500 to-blue-700 italic font-medium text-base mb-4 w-auto py-3 px-2 rounded-md cursor-pointer">Go Back</Link>
       </div>
     </div>
