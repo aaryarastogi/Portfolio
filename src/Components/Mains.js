@@ -3,12 +3,14 @@ import About from './About/About'
 import Contact from './ContactUs/Contact'
 import Home from './Home/Home'
 import Project from './Project/Project'
+import Experience from './Experience/Experience'
 
 const Mains = () => {
   return (
     <div className='bg-[#0a0e27]'>
         <Home/>
         <About/>
+        <Experience/>
         <Project/>
         <Contact/>
     </div>

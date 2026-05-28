@@ -89,7 +89,7 @@ const Home = () => {
         </motion.a>
       </motion.div>
 
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10 py-12 md:py-0 pb-24 lg:pb-12'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10 py-12 md:py-0 pb-12 sm:pb-24 lg:pb-12'>
         {/* Left Content */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -114,7 +114,7 @@ const Home = () => {
             <span className='block'>I'm</span>
             <span className='gradient-text block mt-2'>
               <Typed
-                strings={["Aarya Rastogi", "A Frontend Developer", "A Full-Stack Developer", "A UI/UX Enthusiast"]}
+                strings={["Aarya Rastogi", "A Frontend Developer", "A Full-Stack Developer", "An UI/UX Enthusiast"]}
                 typeSpeed={100}
                 backSpeed={50}
                 cursorChar='|'
@@ -153,9 +153,9 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
               className='px-6 md:px-8 py-3 md:py-4 rounded-lg glass border border-white/20 text-white font-semibold text-sm md:text-base tracking-wide cursor-pointer transition-all duration-300 hover:border-purple-400/50 w-full sm:w-auto'
             >
-              <Link to='https://drive.google.com/file/d/19urtKdG_CNkx74iaj-W2i1coc-jvDx0J/view?usp=sharing' target='_blank' className='flex items-center gap-2'>
+              <a href={process.env.REACT_APP_RESUME_URL} target='_blank' className='flex items-center gap-2'>
                 My Resume
-              </Link>
+              </a>
             </motion.button>
           </motion.div>
 

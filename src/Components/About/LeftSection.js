@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import developerImg from '../images/developer.png'
 import resume from '../images/resume.pdf'
-import { Link } from "react-router-dom";
 
 export default function LeftSection() {
   const handleResume=()=>{
     window.open(resume,'_blank')
   }
+
+  console.log(process.env.REACT_APP_RESUME_URL)
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 md:gap-12 px-4 sm:px-8">
@@ -77,12 +78,12 @@ export default function LeftSection() {
           whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(168, 85, 247, 0.4)" }}
           whileTap={{ scale: 0.95 }}
         >
-          <Link to='https://drive.google.com/file/d/19urtKdG_CNkx74iaj-W2i1coc-jvDx0J/view?usp=sharing' target='_blank' className='flex items-center justify-center gap-2'>
+          <a href={process.env.REACT_APP_RESUME_URL} target='_blank' rel="noopener noreferrer" className='flex items-center justify-center gap-2'>
             <span>Download CV</span>
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-          </Link>
+          </a>
         </motion.button>
       </motion.div>
     </div>

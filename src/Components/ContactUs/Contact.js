@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Contact = () => {
   return (
-    <div className='w-full py-12 md:py-20 relative' id="contact">
+    <div className='w-full py-6 sm:py-12 md:py-20 relative' id="contact">
       {/* Background decoration */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-pink-900/5 to-transparent'></div>
       
@@ -14,7 +14,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4'>
             Get In <span className='gradient-text'>Touch</span>

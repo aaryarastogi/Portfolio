@@ -1,6 +1,6 @@
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaHome, FaUser, FaFolder, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaFolder, FaEnvelope, FaBriefcase } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from '../images/logo.png'
@@ -22,6 +22,12 @@ function Navbar() {
   }
   const handleProject=()=>{
     const element=document.getElementById("project");
+    if(element){
+      element.scrollIntoView({behavior:"smooth"})
+    }
+  }
+  const handleExperience=()=>{
+    const element=document.getElementById("experience");
     if(element){
       element.scrollIntoView({behavior:"smooth"})
     }
@@ -55,6 +61,7 @@ function Navbar() {
   const menuItems = [
     { name: 'Home', icon: FaHome, handler: handleHome },
     { name: 'About', icon: FaUser, handler: handleAbout },
+    { name: 'Experience', icon: FaBriefcase, handler: handleExperience },
     { name: 'Projects', icon: FaFolder, handler: handleProject },
     { name: 'Contact', icon: FaEnvelope, handler: handleContact },
   ];
