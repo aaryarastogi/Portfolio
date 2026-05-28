@@ -2,6 +2,9 @@
   "name": "pf",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@ramonak/react-progress-bar": "^5.4.0",
     "@testing-library/jest-dom": "^5.16.5",
