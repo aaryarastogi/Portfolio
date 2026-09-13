@@ -71,7 +71,7 @@ return (
           swipeable={true}
           draggable={false}
           infinite={true}
-          autoPlay={true}
+          autoPlay={false}
           autoPlaySpeed={4000}
           keyBoardControl={true}
           slidesToSlide={1}

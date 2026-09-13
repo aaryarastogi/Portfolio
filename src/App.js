@@ -13,6 +13,7 @@ import Ecommerce from './Components/PrjFolder/Ecommerce'
 import ComingSoon from './Components/ComingSoon'
 import Tourism from './Components/PrjFolder/Tourism'
 import { AnimatePresence } from 'framer-motion';
+import ChatbotAI from './Components/PrjFolder/ChatbotAI'
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +45,7 @@ const Main = () => {
       <Route path='/casestudy/weatherForecastingWebsite' element={<Weather/>}></Route>
       <Route path='/casestudy/Cartify' element={<Ecommerce/>}></Route>
       <Route path='/casestudy/tourismwebsite' element={<Tourism/>}></Route>
+      <Route path='/casestudy/chatbotai' element={<ChatbotAI/>}></Route>
     </Routes>
     </div>
   )

@@ -4,6 +4,7 @@ import img3 from '../images/quote.png'
 import img4 from '../images/amazon.png'
 import img5 from '../images/weather.png'
 import img6 from '../images/tourism.png'
+import chatbotai from '../images/chatbotai.jpg'
 
 const data={
     cardData:[
@@ -13,6 +14,13 @@ const data={
             img:img6,
             title:'Tourism Website',
             desc:'Built a visually rich tourism website highlighting destinations, packages, and booking options using responsive layouts. It is created using MERN Stack.'
+        },
+        {
+            id:2,
+            Name:'ChatbotAI',
+            img:chatbotai,
+            title:'Chatbot AI',
+            desc:'Built a full-stack AI chatbot with Google OAuth and email/password authentication, integrating the Google Gemini API for real-time streaming responses. Designed a modern glassmorphic UI and deployed the app on AWS Amplify with CI/CD.'
         },
         {
             id:2,
