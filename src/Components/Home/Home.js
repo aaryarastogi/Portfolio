@@ -35,7 +35,8 @@ const Home = () => {
   }
 
   const handleResume=()=>{
-    window.open(resume,'_blank')
+    const resumeUrl = process.env.REACT_APP_RESUME_URL || 'https://drive.google.com/file/d/1lsCwExv40wgALNfl6U-JaN0oiC7iPhL0/view?usp=drive_link';
+    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
   }
 
   return (
@@ -148,15 +149,16 @@ const Home = () => {
             >
               Hire Me
             </motion.button>
-            <motion.button 
+            <motion.a 
+              href="https://drive.google.com/file/d/1lsCwExv40wgALNfl6U-JaN0oiC7iPhL0/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='px-6 md:px-8 py-3 md:py-4 rounded-lg glass border border-white/20 text-white font-semibold text-sm md:text-base tracking-wide cursor-pointer transition-all duration-300 hover:border-purple-400/50 w-full sm:w-auto'
+              className="px-6 md:px-8 py-3 md:py-4 rounded-lg glass border border-white/20 text-white font-semibold text-sm md:text-base tracking-wide cursor-pointer transition-all duration-300 hover:border-purple-400/50 flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              <a href={process.env.REACT_APP_RESUME_URL} target='_blank' className='flex items-center gap-2'>
-                My Resume
-              </a>
-            </motion.button>
+              <span>My Resume</span>
+            </motion.a>
           </motion.div>
 
           {/* Mobile Social Links - Inline with content */}

@@ -10,48 +10,48 @@ const data={
     cardData:[
         {
             id:1,
-            Name:'Tourism Website',
+            Name:'tourismWebsite',
             img:img6,
             title:'Tourism Website',
             desc:'Built a visually rich tourism website highlighting destinations, packages, and booking options using responsive layouts. It is created using MERN Stack.'
         },
         {
             id:2,
-            Name:'ChatbotAI',
+            Name:'chatbotAI',
             img:chatbotai,
             title:'Chatbot AI',
             desc:'Built a full-stack AI chatbot with Google OAuth and email/password authentication, integrating the Google Gemini API for real-time streaming responses. Designed a modern glassmorphic UI and deployed the app on AWS Amplify with CI/CD.'
         },
         {
-            id:2,
-            Name:'Cartify',
+            id:3,
+            Name:'cartify',
             img:img2,
             title:'Cartify',
             desc:'Developed a full-stack e-commerce web application with product management, user authentication, and cart functionality using frontend and backend integration.'
         },
         {
-            id:3,
+            id:4,
             Name:'restaurantWebsite',
             img:img1,
             title:'Restaurant Website',
             desc:'Designed a modern, responsive restaurant website showcasing menu, gallery, and add to cart feature with an elegant UI.'
         },
         {
-            id:4,
+            id:5,
             Name:'weatherForecastingWebsite',
             img:img5,
             title:'Weather Forecasting Website',
             desc:'Developed a Node.js-based weather app using live API integration to display real-time weather data.'
         },
         {
-            id:5,
+            id:6,
             Name:'automaticQuoteGenerator',
             img:img3,
             title:'Automatic Quote Generator',
             desc:'Created a minimal web app that dynamically generates inspirational quotes at the click of a button and with an option of posting quotes on twitter account.'
         },
         {
-            id:6,
+            id:7,
             Name:'amazonClone',
             img:img4,
             title:'Amazon Clone',

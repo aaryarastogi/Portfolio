@@ -166,8 +166,8 @@ const Experience = () => {
               }`}>
                 {/* Active/Current indicator badge */}
                 {exp.isCurrent && (
-                  <span className="absolute -top-2.5 right-4 sm:right-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-[9px] sm:text-xs font-bold px-2 py-0.5 rounded-full shadow-lg border border-pink-400/25 animate-pulse">
-                    Current
+                  <span className="absolute -top-2.5 right-4 sm:right-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-[9px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full shadow-lg border border-pink-400/25 animate-pulse">
+                    Latest
                   </span>
                 )}
 

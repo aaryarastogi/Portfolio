@@ -10,6 +10,14 @@
     box-sizing: border-box;
 }
 
+html, body, *, *::before, *::after {
+    cursor: auto !important;
+}
+
+a, button, [role="button"], input, select, textarea, .cursor-pointer {
+    cursor: pointer !important;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

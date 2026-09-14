@@ -1,21 +1,22 @@
-/* Modern navbar animations */
-@media (hover: hover) {
-    nav li:hover {
-        transform: translateY(-2px);
-    }
-    nav img:hover {
-        transform: scale(1.1) rotate(5deg);
-    }
+/* Modern Floating Glass Navbar Animations & Highlights */
+
+/* Subtle glowing pulse animation for navbar borders */
+@keyframes navbarGlow {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(168, 85, 247, 0.15);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(236, 72, 153, 0.25);
+  }
 }
 
-/* Smooth transitions for navbar elements */
-nav a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.navbar-floating-glow {
+  animation: navbarGlow 6s ease-in-out infinite;
 }
 
-/* Mobile menu animation */
-@media (max-width: 768px) {
-    nav ul {
-        transition: all 0.3s ease-in-out;
-    }
+/* Glass backdrop fallback */
+.nav-glass-panel {
+  background: rgba(10, 14, 39, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }

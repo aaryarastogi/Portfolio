@@ -8,7 +8,6 @@ import AutomaticQuote from './Components/PrjFolder/AutomaticQuote'
 import Weather from './Components/PrjFolder/Weather'
 import Mains from './Components/Mains'
 import Loader from './Components/Loader'
-import AnimCurs from './Components/AnimCurs'
 import Ecommerce from './Components/PrjFolder/Ecommerce'
 import ComingSoon from './Components/ComingSoon'
 import Tourism from './Components/PrjFolder/Tourism'
@@ -26,7 +25,6 @@ const Main = () => {
   isLoading?
   <Loader/>:
     <div className='overflow-hidden bg-[#0a0e27] min-h-screen'>
-    <AnimCurs/>
     <Navbar/>
     <Routes>
       <Route path='/*' element={<Mains/>}></Route>
@@ -43,8 +41,11 @@ const Main = () => {
       <Route path='/casestudy/restaurantWebsite' element={<Restaurant/>}></Route>
       <Route path='/casestudy/automaticQuoteGenerator' element={<AutomaticQuote/>}></Route>
       <Route path='/casestudy/weatherForecastingWebsite' element={<Weather/>}></Route>
+      <Route path='/casestudy/cartify' element={<Ecommerce/>}></Route>
       <Route path='/casestudy/Cartify' element={<Ecommerce/>}></Route>
+      <Route path='/casestudy/tourismWebsite' element={<Tourism/>}></Route>
       <Route path='/casestudy/tourismwebsite' element={<Tourism/>}></Route>
+      <Route path='/casestudy/chatbotAI' element={<ChatbotAI/>}></Route>
       <Route path='/casestudy/chatbotai' element={<ChatbotAI/>}></Route>
     </Routes>
     </div>

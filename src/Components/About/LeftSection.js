@@ -4,7 +4,8 @@ import resume from '../images/resume.pdf'
 
 export default function LeftSection() {
   const handleResume=()=>{
-    window.open(resume,'_blank')
+    const resumeUrl = process.env.REACT_APP_RESUME_URL || 'https://drive.google.com/file/d/1lsCwExv40wgALNfl6U-JaN0oiC7iPhL0/view?usp=drive_link';
+    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
   }
 
   console.log(process.env.REACT_APP_RESUME_URL)
@@ -73,18 +74,19 @@ export default function LeftSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.9 }}
       >
-        <motion.button
-          className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold text-sm md:text-base shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300 w-full sm:w-auto"
+        <motion.a
+          href="https://drive.google.com/file/d/1lsCwExv40wgALNfl6U-JaN0oiC7iPhL0/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold text-sm md:text-base shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto"
           whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(168, 85, 247, 0.4)" }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href={process.env.REACT_APP_RESUME_URL} target='_blank' rel="noopener noreferrer" className='flex items-center justify-center gap-2'>
-            <span>Download CV</span>
-            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </a>
-        </motion.button>
+          <span>Download CV</span>
+          <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </motion.a>
       </motion.div>
     </div>
   );
